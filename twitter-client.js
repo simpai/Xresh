@@ -21,10 +21,12 @@ async function postTweetWithImage(text, filePath) {
 
         console.log('Posting tweet...');
         console.log('Posting tweet (v2)...');
-        await rwClient.v2.tweet({
+        // Use client.v2.tweet directly, ensuring we interpret the response correctly
+        const result = await client.v2.tweet({
             text: text,
             media: { media_ids: [mediaId] }
         });
+        console.log('Tweet posted successfully! ID:', result.data.id);
         console.log('Tweet posted successfully!');
     } catch (error) {
         console.error('Error in postTweetWithImage:', error);
