@@ -2,7 +2,7 @@ name: Math Bot Post
 
 on:
   schedule:
-    - cron: '0 * * * *' # Every hour
+    - cron: '0 0,3 * * *' # 09:00 AM & 12:00 PM KST (UTC 00:00 & 03:00)
   workflow_dispatch: # Allows manual trigger
 
 jobs:
