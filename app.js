@@ -1,8 +1,6 @@
-const { generateUserStyleProblem } = require('./math-generator');
-const { generateFindCharacterPuzzle } = require('./find-character-generator');
 const { generateWordSearch } = require('./word-search-generator');
 const { generateMathImage } = require('./image-generator');
-const { postTweetWithImage } = require('./twitter-client');
+const { postTweetWithImage } = require('./browser-client'); // Use Puppeteer automation
 const path = require('path');
 const fs = require('fs');
 
