@@ -14,7 +14,7 @@ async function postTweetWithImage(text, imagePath) {
 
     console.log('Launching browser...');
     const browser = await puppeteer.launch({
-        headless: false, // Set to true for background operation after testing
+        headless: true, // Run in background
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
